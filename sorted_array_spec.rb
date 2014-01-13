@@ -129,5 +129,12 @@ describe SortedArray do
     it 'returns nil for an item not in the array' do
       @sorted_array.index("Boredom").should == nil
     end
+
+    it 'returns nil for an item not in the array' do
+      @sorted_array.index("Aaron").should == nil
+    end
+    it 'returns nil for an item greater than anything in the array' do
+      @sorted_array.index("Zebra").should == nil
+    end
   end
 end
