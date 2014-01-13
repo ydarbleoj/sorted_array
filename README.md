@@ -8,7 +8,7 @@ You can run the spec with `rspec <spec_file_name>`.
 
 When you first run the spec, there will be a lot of errors and a lot of red.  Don't be alarmed.  Implement the methods one at a time.  Commit often and plan each method before starting it.
 
-### Recommended Order for Implementing Methods
+### I suggest you implement the methods in this order:
 1. `SortedArray#[]` will be short.  Come back to it if you don't get it.
 2. `SortedArray#first_larger_index`
 3. `SortedArray#add`
