@@ -21,6 +21,26 @@ describe SortedArray do
     end
   end
 
+  describe '#[]' do
+    before do
+      @source = [2,3,4,7,9]
+      @sorted_array = SortedArray.new
+      @sorted_array.arr = @source
+    end
+
+    it 'indexes an element' do
+      @sorted_array[2].should == 4
+    end
+
+    it 'gives nil for an out of range element' do
+      @sorted_array[10].should == nil
+    end
+
+    it 'indexes a range' do
+      @sorted_array[1..3].should == @source[1..3]
+    end
+  end
+
   describe '#size' do
     it 'gives the size of []' do
       sorted_array = SortedArray.new
@@ -88,6 +108,25 @@ describe SortedArray do
     end
     it 'gives the right location' do
       @sorted_array.first_larger_index(5).should == 3
+    end
+  end
+
+  describe '#index' do
+    before do
+      @source = [2,3,4,7,9]
+      @sorted_array = SortedArray.new(@source)
+    end
+    it 'finds the middle item' do
+      @sorted_array.index(4).should == 2
+    end
+    it 'finds an item in the left half' do
+      @sorted_array.index(3).should == 1
+    end
+    it 'finds the last item' do
+      @sorted_array.index(9).should == 4
+    end
+    it 'returns nil for an item not in the array' do
+      @sorted_array.index(-4).should == nil
     end
   end
 end
