@@ -113,20 +113,21 @@ describe SortedArray do
 
   describe '#index' do
     before do
-      @source = [2,3,4,7,9]
+      @source = ["Crisis","Balderdash","Masticate","Xanadu","Lemur"]
+      # ["Balderdash", "Crisis", "Lemur", "Masticate", "Xanadu"]
       @sorted_array = SortedArray.new(@source)
     end
     it 'finds the middle item' do
-      @sorted_array.index(4).should == 2
+      @sorted_array.index("Lemur").should == 2
     end
     it 'finds an item in the left half' do
-      @sorted_array.index(3).should == 1
+      @sorted_array.index("Crisis").should == 1
     end
     it 'finds the last item' do
-      @sorted_array.index(9).should == 4
+      @sorted_array.index("Xanadu").should == 4
     end
     it 'returns nil for an item not in the array' do
-      @sorted_array.index(-4).should == nil
+      @sorted_array.index("Boredom").should == nil
     end
   end
 end
