@@ -4,6 +4,8 @@ In this lab you will build a SortedArray class.  Each instance of SortedArray wi
 
 We are providing a template (`sorted_array_template.rb`) which has stubs of methods you need (make more if it makes sense or if you want to), and a spec (`sorted_array_spec.rb`) which will help you get everything working.  You can add tests to the spec, but don't delete any.
 
+You can run the spec with `rspec <spec_file_name>`.
+
 When you first run the spec, there will be a lot of errors and a lot of red.  Don't be alarmed.  Implement the methods one at a time.  Commit often and plan each method before starting it.
 
 ### Recommended Order for Implementing Methods
@@ -15,4 +17,4 @@ When you first run the spec, there will be a lot of errors and a lot of red.  Do
 
 `initialize` will use `add`, which will use `first_larger_index`.
 
-Submit your lab through the lab submission form.
+Submit your lab through the lab submission form.  Have fun!	
