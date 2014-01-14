@@ -23,7 +23,7 @@ describe SortedArray do
 
   describe '#[]' do
     before do
-      @source = [2,3,4,7,9]
+      @source = [2,3,4,7,9] 
       @sorted_array = SortedArray.new
       @sorted_array.internal_arr = @source
     end
